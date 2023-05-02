@@ -18,8 +18,8 @@ function Expenses(props) {
   return (
     <div className="expenses">
       <ExpenseFilter selected = {expenseFilter} onExpensefilter = {filterHandler}/>
-      <ExpensesList items= {filteredExpenses}/>
       <ExpenseChart expenses = {filteredExpenses}/>
+      <ExpensesList items= {filteredExpenses}/>
     </div>
   );
 }

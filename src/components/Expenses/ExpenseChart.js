@@ -14,10 +14,10 @@ export default function ExpenseChart (props) {
         {label: "Oct", value: 0},
         {label: "Nov", value: 0},
         {label: "Dec", value: 0}
-    ]
+    ];
     for (const expense of props.expenses){
-        const expenseMonth = expense.date.getMonth()
-        dataPointValues[expenseMonth].value += expense.value
+        const expenseMonth = expense.date.getMonth();
+        dataPointValues[expenseMonth].value += expense.amount;
     }
     return (
         <Chart dataPoints= {dataPointValues}/>
